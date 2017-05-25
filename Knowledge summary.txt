@@ -25,6 +25,6 @@ Knowledge summary
 12.git reflog：查看命令历史记录
 13.git reset —-hard HEAD^：回到上一个版本（此处的版本都为master中的版本，可以直接写版本号）
 14.git checkout —- file：撤销working版本的修改，还原成master中的HEAD版本
-15.git reset HEAD file：
+15.git reset HEAD file：test
   
   
