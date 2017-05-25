@@ -23,7 +23,8 @@ Knowledge summary
 10.git diff —-stat：查看简单对比结果，可以添加—-stat参数（查看哪些文件被改动）
 11.git log：查看提交历史记录（—-pretty=oneline参数可以简化记录信息）
 12.git reflog：查看命令历史记录
-13.git reset —-hard HEAD^：回到上一个版本（此处的版本都为master中的版本）
-14.
+13.git reset —-hard HEAD^：回到上一个版本（此处的版本都为master中的版本，可以直接写版本号）
+14.git checkout —- file：撤销working版本的修改，还原成master中的HEAD版本
+15.
   
   
