@@ -1,0 +1,23 @@
+Knowledge summary
+1.git是先进的分布式版本控制系统
+2.第一次安装git需要设置：
+  git config —-global user.name “xxx”
+  git config —-global user.email “xxx”
+  （—-global参数表示此计算机上的所有git仓库都会使用这个配置）
+3.创建版本库：
+  a.最好创建一个空的目录，也可以选择已有文件的目录（不要包含中文）
+  b.通过git init命令把该目录变成git可以管理的仓库
+4.git分布式版本管理系统包括两个区：
+  一.工作区（Working directory）：
+    电脑里能看到的目录（不包括隐藏目录版本库.git）
+  二.版本库（Repository）
+    a.暂存区（stage/index）
+    b.分支（master）
+5.添加文件到版本库：
+  a.git add <file>：把工作区的文件放入暂存区（stage），可反复使用添加多个文件
+  b.git commit -m “xxx”：一次性把stage中的文件全部提交到分支中（master），“xxx”内容为本次提交的注释说明
+6.git status：查看当前仓库的状态
+7.git diff：查看working与stage间的差异
+8.
+  
+  
