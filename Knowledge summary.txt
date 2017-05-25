@@ -24,7 +24,10 @@ Knowledge summary
 11.git log：查看提交历史记录（—-pretty=oneline参数可以简化记录信息）
 12.git reflog：查看命令历史记录
 13.git reset —-hard HEAD^：回到上一个版本（此处的版本都为master中的版本，可以直接写版本号）
-14.git checkout —- file：撤销working版本的修改，还原成master中的HEAD版本
-15.git reset HEAD file：test
+14.git checkout —- <file>：撤销working版本的修改，还原成master中的HEAD版本
+15.git reset HEAD <file>：可以消除stage中的版本（如果把HEAD换成HEAD^则会把HEAD^的版本替换进stage中）
+16.删除版本：
+  a.git rm <file>：删除working中的版本并提交到stage（手动删除working中版本时也可用git add <file>）
+  b.git commit -m “xxx”：删除master中的版本
   
   
