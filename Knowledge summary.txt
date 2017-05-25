@@ -17,7 +17,13 @@ Knowledge summary
   a.git add <file>：把工作区的文件放入暂存区（stage），可反复使用添加多个文件
   b.git commit -m “xxx”：一次性把stage中的文件全部提交到分支中（master），“xxx”内容为本次提交的注释说明
 6.git status：查看当前仓库的状态
-7.git diff：查看working与stage间的差异
-8.
+7.git diff：查看working中版本与stage中版本的差异，也就是正在编辑中文件，与最后一次add版本作对比，一般在add前使用
+8.git diff —-cached/staged：查看stage中版本与master中的HEAD版本间差异，也就是最后一次add版本与最后一次commit版本作对比，一般在commit前使用
+9.git diff HEAD：查看working中版本与master中的HEAD版本间差异，还未add版本与最后一次commit版本作对比
+10.git diff —-stat：查看简单对比结果，可以添加—-stat参数（查看哪些文件被改动）
+11.git log：查看提交历史记录（—-pretty=oneline参数可以简化记录信息）
+12.git reflog：查看命令历史记录
+13.git reset —-hard HEAD^：回到上一个版本（此处的版本都为master中的版本）
+14.
   
   
