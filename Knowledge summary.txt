@@ -1,4 +1,5 @@
 Knowledge summary
+
 1.git是先进的分布式版本控制系统
 2.第一次安装git需要设置：
   git config —-global user.name “xxx”
@@ -29,5 +30,19 @@ Knowledge summary
 16.删除版本：
   a.git rm <file>：删除working中的版本并提交到stage（手动删除working中版本时也可用git add <file>提交版本到stage）
   b.git commit -m “xxx”：删除master中的版本
+17.通过SSH加密本地Git仓库与GitHub仓库之间的传输：
+  a.确认用户目录下是否有隐藏文件夹 .ssh，其中是否有 id_rsa和 id_rsa.pub这两个文件，没有的话需要创建SSH Key：在终端输入 ssh-keygen -t rsa -C ”xxxx@example.com”（一般无需设置密码）
+  b.id_rsa是私匙，不要泄露，id_rsa.pub是公匙，可以告诉他人
+  c.登录GitHub，打开“Account settings”，“SSH Keys”页面，填上任意Title，在Key文本框里粘贴 id_rsa.pub文件的内容
+  d.点击“add key”
+  （想要其它电脑可以往GitHub上推送，都需要公匙才可以）
+18.添加远程库：
+  为了把本地Git仓库添加到GitHub上的仓库，达到既可以备份又可以让其他人通过该仓库进行协作的目的，需要以下操作：
+  a.登录GitHub，点击“Create a new repo”按钮
+  b.在“Repository name”内填入GitHub仓库的新名字，其他保持默认设置，点击“Create repository”按钮
+  c.关联远程库：git remote add origin git@server-name:path/repo-name.git（可以直接网页上复制）
+  d.推送master分支的所有内容：git push -u origin master（1.-u 参数会把本地的master分支和远程的master分支关联起来，以后推送或者拉取时可以简化命令。2.第一次推送时会得到一个警告，需要确认GitHub的Key的指纹信息是否真的来自GitHub的服务器，输入yes回车即可）
+  d.本地每次提交后，可以使用 git push origin master 推送最新修改
+  
   
   
