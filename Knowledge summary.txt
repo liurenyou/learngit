@@ -43,6 +43,22 @@ Knowledge summary
   c.关联远程库：git remote add origin git@server-name:path/repo-name.git（可以直接网页上复制）
   d.推送master分支的所有内容：git push -u origin master（1.-u 参数会把本地的master分支和远程的master分支关联起来，以后推送或者拉取时可以简化命令。2.第一次推送时会得到一个警告，需要确认GitHub的Key的指纹信息是否真的来自GitHub的服务器，输入yes回车即可）
   d.本地每次提交后，可以使用 git push origin master 推送最新修改
-  
+19.从远程仓库克隆到本地仓库：
+  a.因为要使用SSH协议，所以先确认需要克隆库的电脑与被克隆的GitHub账号间是否创建SSH协议，没有请参照第17条完成SSH协议（利用https协议传输速度慢，并且每次推送都需要输入口令）
+  b.使用命令：git clone git@github.com:xxxxxxxx(xxx为被GitHub仓库地址，eg：liurenyou/gitskills.git)
+20.创建一个分支：git branch xxx
+21.切换到一个分支：git checkout xxx
+22.创建并切换到分支：git checkout -b xxx
+23.查看当前分支：git branch
+24.A分支成果合并到B分支上：
+  a.切换到B分支（git checkout B）
+  b.使用命令：git merge A
+25.Fast-foward（快进模式）：以第24条为例，直接把B指向A的当前提交
+26.删除分支：git branch -d xxx
+27.冲突问题：合并的两分支都分别有了新的提交，此时无法执行“快进模式”，所以就会产生冲突问题
+28.解决冲突问题：执行合并后，打开文件，手动修改Git标记出不同分支的内容，之后再次进行提交（add与commit）,最后删除没用的分支
+29.查看分支合并情况：git log —-graph —-pretty=oneline —-abbrev-commit
+30.禁用“Fast-forward”合并：git merge —-no-ff -m “xxx” xxx（本次合并需要创建一个新的commit，所以加上了 -m参数写入描述信息）
+31.分支策略：master分支应该非常稳定，所以仅用来发布新版本，而平时干活都应该在分支上进行
   
   
