@@ -60,5 +60,10 @@ Knowledge summary
 29.查看分支合并情况：git log —-graph —-pretty=oneline —-abbrev-commit
 30.禁用“Fast-forward”合并：git merge —-no-ff -m “xxx” xxx（本次合并需要创建一个新的commit，所以加上了 -m参数写入描述信息）
 31.分支策略：master分支应该非常稳定，所以仅用来发布新版本，而平时干活都应该在分支上进行
-  
+32.暂时保存工作区的内容：git stash
+33.恢复stash内容并不删除stash内容：git stash apply
+34.删除stash内容：git stash drop
+35.恢复stash内容并删除其内容：git stash pop
+36.查看stash内容：git stash list
+
   
