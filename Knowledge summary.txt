@@ -65,5 +65,14 @@ Knowledge summary
 34.删除stash内容：git stash drop
 35.恢复stash内容并删除其内容：git stash pop
 36.查看stash内容：git stash list
-
-  
+37.强制删除分支（未合并过的分支）：git branch -D xxx
+38.查看远程库信息：git remote -v
+39.主分支必推，其它分支视工作与心情选择性推送
+40.多人协作模式push：
+  a.利用 git push origin branch-name 推送自己的修改
+  b.如果因为远程分支版本比本地版本新，则需要使用 git pull 试图合并，解决冲突
+  c.pull时出现”no tracking information”说明本地分支和远程分支的链接关系没有创建，使用命令：
+   git branch -—set-upstream branch-name origin/branch-name
+  d.没有冲突或已经解决冲突后，本地commit
+  e.此时再用 git push origin branch-name 推送
+41.
