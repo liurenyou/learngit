@@ -75,4 +75,19 @@ Knowledge summary
    git branch -—set-upstream branch-name origin/branch-name
   d.没有冲突或已经解决冲突后，本地commit
   e.此时再用 git push origin branch-name 推送
-41.
+41.标签管理：可以给特定commit另起一个简易的名字，eg：v1.0
+42.创建标签：git tag <name> <commit id>
+43.查看所有标签：git tag
+44.查看标签信息：git show <tag name>
+45.创建带有说明的标签：git tage -a <tag name> -m “xxx” <commit id>
+46.查看历史提交commit id：git log —-pretty=oneline —-abbrev-commit
+47.删除标签：git tag -d <tag name>
+48.远程仓库推送标签：git push origin <tag name>
+49.一次性推送全部标签：git push origin —-tags
+50.删除远程标签：
+  a.删除本地标签：git tag -d <tag name>
+  b.删除远程标签：git push origin :refs/tags/<tag name>
+51.让Git显示颜色：git config —-global color.ui true (—-global参数是全局参数，该电脑所有Git仓库)
+52.配置别名：git config —-global alias.st status
+53.仓库配置文件都在 .git/config 文件中
+54.删除别名时可以去用户目录的一个隐藏文件 .gitconfig 中删掉alias后对应要删除的别名那一行即可
